@@ -9,7 +9,7 @@ export default ({ addComment }) => (
   >
     <input
       className="CommentInput"
-      placeholder="Comment"
+      placeholder="Write something..."
     />
   </form>
 );
