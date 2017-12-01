@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,YAAY,CAAC;EACX,UAAU,EAAE,QAAQ;CAKrB;;AAND,AAEE,YAFU,CAEV,aAAa,CAAC;EACZ,MAAM,EAAE,OAAO;EACf,KAAK,EAAE,GAAG;CACX",
+    "sources": [
+        "CommentForm.scss"
+    ],
+    "names": [],
+    "file": "CommentForm.css"
+}

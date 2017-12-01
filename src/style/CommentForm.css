@@ -1,0 +1,11 @@
+.CommentForm {
+  align-self: flex-end;
+}
+
+.CommentForm .CommentInput {
+  margin: 20px 2%;
+  width: 96%;
+}
+ 
+
+ /*# sourceMappingURL= CommentForm.css.map */

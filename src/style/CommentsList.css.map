@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAC;EACZ,YAAY,EAAE,CAAC;CAChB",
+    "sources": [
+        "CommentsList.scss"
+    ],
+    "names": [],
+    "file": "CommentsList.css"
+}

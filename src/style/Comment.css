@@ -1,0 +1,31 @@
+.Comment {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 50px 1fr 20px 100px;
+  margin: 5px 0;
+}
+
+.Comment div {
+  justify-content: space-between;
+}
+
+.Comment div button {
+  border: 0;
+  background: none;
+}
+
+.Comment .edit button {
+  display: none;
+}
+
+.Comment .edit:hover button {
+  display: inline;
+}
+
+.Comment .text {
+  justify-self: left;
+  justify-content: space-between;
+}
+ 
+
+ /*# sourceMappingURL= Comment.css.map */

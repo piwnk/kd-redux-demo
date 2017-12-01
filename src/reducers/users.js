@@ -1,7 +1,5 @@
-export const users = (state = [], action) => (
+const users = (state = [], action) => (
   state
 );
 
-// export function users(state = [], action) {
-//   return state;
-// }
+export default users;

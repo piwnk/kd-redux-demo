@@ -6,7 +6,7 @@ import {
   THUMB_DOWN_COMMENT } from '../actions/actionTypes';
 
 
-export function comments(state = [], action) {
+const comments = (state = [], action) => {
   switch (action.type) {
     case ADD_COMMENT:
       return [
@@ -23,30 +23,31 @@ export function comments(state = [], action) {
 
     case EDIT_COMMENT:
       return state.map(comment => (
-          {
-            ...coment,
-            text: comment.id === action.id ? action.text : comment.text
-          }
-        ));
+        {
+          ...comment,
+          text: comment.id === action.id ? action.text : comment.text
+        }
+      ));
 
-    // czy na pewno lepiej przebudować wszystkie komentarze gdy ktoś klika like'a ??
     case THUMB_UP_COMMENT:
       return state.map(comment => (
-          {
-            ...coment,
-            votes: comment.id === action.id ? comment.votes + 1 : comment.votes
-          }
-        ));
+        {
+          ...comment,
+          votes: comment.id === action.id ? comment.votes + 1 : comment.votes
+        }
+      ));
 
     case THUMB_DOWN_COMMENT:
       return state.map(comment => (
-          {
-            ...comment,
-            votes: comment.id === action.id ? comment.votes - 1 : comment.votes
-          }
-        ));
+        {
+          ...comment,
+          votes: comment.id === action.id ? comment.votes - 1 : comment.votes
+        }
+      ));
 
     default:
       return state;
   }
-}
+};
+
+export default comments;

@@ -1,14 +1,14 @@
 import React from 'react';
-import './App.css';
+import '../style/App.css';
 
+import CommentFormContainer from './CommentFormContainer';
 import CommentsListContainer from './CommentsListContainer';
 
-const App = () => {
-  return (
-    <div className="App">
-      <CommentsListContainer />
-    </div>
-  );
-};
+const App = () => (
+  <div className="App">
+    <CommentsListContainer />
+    <CommentFormContainer />
+  </div>
+);
 
 export default App;

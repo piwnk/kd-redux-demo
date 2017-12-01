@@ -5,17 +5,18 @@ import { createStore } from 'redux';
 
 // import registerServiceWorker from './registerServiceWorker';
 
-import './index.css';
+import './style/index.css';
 import App from './containers/App';
 import { addComment } from './actions/actions';
-import { reducer } from './reducers/reducer';
+import reducer from './reducers/reducer';
 
 const store = createStore(reducer);
 
-ReactDOM.render((
-  <Provider store={store}>
-    <App />
-  </Provider>
+ReactDOM.render(
+  (
+    <Provider store={store}>
+      <App />
+    </Provider>
   ),
   document.getElementById('root')
 );
