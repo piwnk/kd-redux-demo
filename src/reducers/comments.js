@@ -19,43 +19,32 @@ export function comments(state = [], action) {
       ];
 
     case REMOVE_COMMENT:
-      return Object.assign({}, state, {
-        comments: state.filter(comment => comment.id !== action.id)
-      });
+      return state.filter(comment => comment.id !== action.id);
 
     case EDIT_COMMENT:
-      return Object.assign({}, state, {
-        // comments: state.comments.map(comment => (
-        comments: state.map(comment => (
+      return state.map(comment => (
           {
             ...coment,
             text: comment.id === action.id ? action.text : comment.text
           }
-        ))
-      });
+        ));
 
     // czy na pewno lepiej przebudować wszystkie komentarze gdy ktoś klika like'a ??
     case THUMB_UP_COMMENT:
-      return Object.assign({}, state, {
-        // comments: state.comments.map(comment => (
-        comments: state.map(comment => (
+      return state.map(comment => (
           {
             ...coment,
             votes: comment.id === action.id ? comment.votes + 1 : comment.votes
           }
-        ))
-      });
+        ));
 
     case THUMB_DOWN_COMMENT:
-      return Object.assign({}, state, {
-        // comments: state.comments.map(comment => (
-        comments: state.map(comment => (
+      return state.map(comment => (
           {
             ...comment,
             votes: comment.id === action.id ? comment.votes - 1 : comment.votes
           }
-        ))
-      });
+        ));
 
     default:
       return state;
