@@ -5,7 +5,12 @@ import '../style/CommentForm.css';
 export default ({ addComment }) => (
   <form
     className="CommentForm"
-    onSubmit={e => addComment(e.target.firstElementChild.value)}
+    onSubmit={(e) => {
+      e.preventDefault();
+      const comment = e.target.firstElementChild.value;
+      e.target.firstElementChild.value = '';
+      return addComment(comment);
+    }}
   >
     <input
       className="CommentInput"
